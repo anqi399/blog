@@ -23,7 +23,7 @@ URL：
 `hexo g`  
 最后就可以打开看看了  
 `hexo s`  
-![images]()
+![images](https://github.com/anqi399/blog/blob/main/images/hexo_s.jpg)  
 根据提示，浏览器输入http://localhost:4000 然后就可以看到首页了，看完了记得Ctrl+C关闭
 
 
