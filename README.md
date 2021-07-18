@@ -31,8 +31,8 @@ tips：如果你觉得输入命令来更新本地和仓库不习惯（麻烦）�
 ```
 deploy:
   type: git  
-  repository: https://github.com/anqi399/anqi399.github.io //你的仓库地址  
-  branch: master
+  repository: https://github.com/anqi399/anqi399.github.io.git //你的仓库地址  
+  branch: main
 ```
 tips: 仓库地址在你的仓库页，点击Clone，然后就会显示HTTPS的地址  
 
@@ -67,7 +67,7 @@ www选CNAME（链接到另一个地方，因为要把你的域名链接到之前
 接下来就是将CNAME和你的gitHub仓库绑定在一起  
 参考他人的经验，首先在桌面新建一个txt文件命名为，CNAME.txt，在里面输入你的网页地址  
 `nishuilema.com   //自己的地址`  
-文件里面就写个地址就行，然后删除txt的后缀保存  
+文件里面就写个地址就行，不需要加www，这样访问的时候不用必须加www就可以进入，最后删除txt的后缀保存  
 ![imgage](https://github.com/anqi399/blog/blob/main/images/CNAME.jpg) 
 再回到你Blog文件，进入resource，把刚刚那个文件剪切到此处  
 最后，回到Blog主文件，右键Git Bash，把常规的三条命令来一遍  
@@ -76,5 +76,8 @@ hexo clean
 hexo g
 hexo d
 ```  
+最最后，去你的仓库看看有没有CNAME这个文件，假如没有（我就遇到了这个问题），就去add file那里手动添加一个，然后把你的地址放进去就行了  
+最最最后，去你的仓库，Settings，找到Pages，看你的网址有没有保存成功  
+![imgage](https://github.com/anqi399/blog/blob/main/images/pages.jpg)  
 
 
