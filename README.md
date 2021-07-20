@@ -34,7 +34,9 @@ deploy:
   repository: https://github.com/anqi399/anqi399.github.io.git //你的仓库地址  
   branch: main
 ```
-tips: 仓库地址在你的仓库页，点击Clone，然后就会显示HTTPS的地址  
+tips:  
+①仓库地址在你的仓库页，点击Clone，然后就会显示HTTPS的地址  
+②上面的barnch: main，网上大多数教材为branch: master 这里是因为现在github已经把默认主分支设为main了，所以改为main更好
 
 然后再回到Blog文件下，打开GIt Bash，进行Git的插件部署  
 `npm install hexo-deployer-git --save`  
@@ -85,3 +87,15 @@ hexo d
 这个Blog的建立过程，短则几小时，长则一两天，运气与细节并存  
 总体上来说算是搭建完成了，接下来就是漫长的美化和内容填充（学习）了，在github上有很多好看的开源主题，也可自己设计  
 本篇主要目的是做一个记录，关于Hexo的搭建网上有更好更详细的教程，共勉！
+
+## 记录
+最近在更换主题上出现了不少的问题，在这里记录一下，大多数问题都能在网上找到答案  
+①在git clean g d 三件套时出现OpenSSL SSL_read: Connection was reset, errno 10054（还有类似这条的报错问题）    
+解决方案：`git config --global http.sslVerify "false"`  
+还是没有解决后，经过不懈的查找最后发现是因为挂了梯子的原因，关掉代理之后就没有问题了  
+②更新博客后的出现404  
+去到博客的仓库——Settings——Pages，发现域名有红色警告，然后点击后面的rename就可以了  
+如果不行的话，检查仓库名与_condig.yml中设置的是不是一致  
+补充：缺少index.html文件也会出现404  
+解决方案： 
+`npm install hexo-generator-index --save`
