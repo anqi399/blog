@@ -93,6 +93,13 @@ hexo d
 ①在git clean g d 三件套时出现OpenSSL SSL_read: Connection was reset, errno 10054（还有类似这条的报错问题）    
 解决方案：`git config --global http.sslVerify "false"`  
 还是没有解决后，经过不懈的查找最后发现是因为挂了梯子的原因，关掉代理之后就没有问题了  
+此处更新：  
+出现OpenSSL SSL_connect: Connection was reset in connection to github-releases.githubusercontent.com:443问题  
+解决方案：[链接](https://blog.csdn.net/qq_37555071/article/details/114260533?utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.base&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.base)  
+出现登陆问题例如Logon failed, use ctrl+c to cancel basic credential prompt.  
+解决方案：[链接](https://blog.csdn.net/weixin_41010198/article/details/101040291)  
+此处按照评论区也有更新git版本的解决方案  
+`git update-git-for-windows`  
 ②更新博客后的出现404  
 去到博客的仓库——Settings——Pages，发现域名有红色警告，然后点击后面的rename就可以了  
 如果不行的话，检查仓库名与_condig.yml中设置的是不是一致  
