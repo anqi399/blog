@@ -100,9 +100,14 @@ hexo d
 解决方案：[链接](https://blog.csdn.net/weixin_41010198/article/details/101040291)  
 此处按照评论区也有更新git版本的解决方案  
 `git update-git-for-windows`  
-②更新博客后的出现404  
+②更新博客后出现404  
 去到博客的仓库——Settings——Pages，发现域名有红色警告，然后点击后面的rename就可以了  
 如果不行的话，检查仓库名与_condig.yml中设置的是不是一致  
 补充：缺少index.html文件也会出现404  
 解决方案： 
-`npm install hexo-generator-index --save`
+`npm install hexo-generator-index --save`   
+
+此处二次更新，短暂出现404后有可能是还没来得及反应，需要等待一会儿。另外，我发现每次更新后，page处的域名绑定会自动把域名后缀改成.com，而我自己就是用的.top，因此每次*hexo d*更新后都要去手动改回来，不然也会404！  
+<br>
+③更新博客后出现页面排版错乱问题  
+主要是由标签和分类产生的错乱，在网上多次查找原因，发现大部分问题是由layout引起的，有的主题文件里会有标签页或者分类页的布局文件，一定要保证每一篇post前面的tags等的写法要一致，注意就算某一篇不用给他分类或者打标签，也要保持写法一致，可以空着但是不能不写！我的问题就出在有的post写了tags，但是有的post又没写，然后就会发生错乱
